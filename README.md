@@ -1,6 +1,6 @@
 CRUD-PHP-SIMPLES
 ================
 
-CRUD em PHP Básico 
+SIMPLE CRUD PHP
 
 Desenvolvimento de um sistema CRUD em php.
