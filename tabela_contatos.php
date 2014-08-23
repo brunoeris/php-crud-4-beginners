@@ -52,10 +52,12 @@
 	</header>
 
 	<div class="container">
+		<div class="container-fluid">
 		<div class="row-fluid">
 			<div class="span12"> 
 				
-				<table class="table table-condensed">
+				<table class="table table-hover table-bordered">
+					<caption>Lista de Contatos</caption>
 					<thead>
 						<tr>
 							<td>#ID</td>
@@ -63,19 +65,23 @@
 							<td>Sobreome</td>
 							<td>Endereço</td>
 							<td>Email</td>
+							<td></td>
+							<td></td>
 						</tr>
 					</thead>
 					<?php 
 						while($row = mysql_fetch_array($result)){
+							echo "<tbody>";
 							echo "<tr>";
 							echo	"<td>".$row['id']."</td>";
 							echo	"<td>".$row['primeiro_nome']."</td>";
 							echo	"<td>".$row['segundo_nome']."</td>";
 							echo	"<td>".$row['endereco']."</td>";
 							echo	"<td>".$row['email']."</td>";
-							echo	"<td><a href=\"edit_custumer.php?id=".$row['id']."\">Edit</a></td>";
-							echo	"<td><a href=\"delete_custumer.php?id=".$row['id']."\">Delete</a></td>";
+							echo	"<td><a href=\"editar_contato.php?id=".$row['id']."\">Editar</a></td>";
+							echo	"<td><a href=\"deletar_contato.php?id=".$row['id']."\">Deletar</a></td>";
 							echo "</tr>";
+							echo "</tbody>";
 						}
 					?>
 				</table>
@@ -83,7 +89,8 @@
 				<br><a href="index.php"> Voltar</a><br>
 
 			</div>    
-		</div>	    
+		</div>	
+		</div>		 
 	</div>
 
 	<!-- Footer

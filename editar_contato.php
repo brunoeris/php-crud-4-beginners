@@ -1,9 +1,20 @@
+<?php 
+	$id = $_GET['id'];
+
+	include_once "conexaobd.php";
+
+	$sql = "SELECT * FROM customer WHERE id = $id";
+	$result = mysql_query($sql);
+
+	$row = mysql_fetch_array($result);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<title>Adicionar Contato</title>
+	<title>Editar Contato</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
 	<link rel="stylesheet" href="css/formatalayout.css">
@@ -45,21 +56,27 @@
 	<div class="container">
 		<div class="row-fluid">
 			<div class="span12"> 
-				<form action="inserir_contato.php" method="post">
+				<form action="update_contato.php" method="post">
 				    <fieldset>
-					    <legend>Adicione um novo contato:</legend>
+					    <legend>Edite o contato:</legend>
+					    	<label>ID</label>
+					    	<input type="text" name="id" value="<?php echo $row['id']; ?>" readonly="readonly"><br>
 						    <label>Nome e Sobrenome:</label>
-						    <input type="text" name="primeironome" placeholder="Nome..."><br>
-						    <input type="text" name="sobrenome" placeholder="Sobrenome...">
+						    <input type="text" name="primeironome" placeholder="Nome..." value="<?php echo $row['primeiro_nome']; ?>"><br>
+						    <input type="text" name="sobrenome" placeholder="Sobrenome..." value="<?php echo $row['segundo_nome']; ?>">
 						    <label>Endereço:</label>
-						    <textarea name="endereco" cols="30" rows="10"></textarea><br>
+						    <textarea name="endereco" cols="30" rows="10">
+						    	<?php echo $row['endereco']; ?>
+						    </textarea><br>
 						    <label>Email:</label>
-						    <input type="email" name="email" placeholder="fulano@email.com"><br>
+						    <input type="email" name="email" placeholder="fulano@email.com" value="<?php echo $row['email'];?>"><br>
 					    <button type="reset" class="btn">Limpar</button>
-					    <button type="button" class="btn btn-danger" onclick="location.href='index.php'">Cancelar</button>
+					    <button type="button" class="btn btn-danger" onclick="location.href='tabela_contatos.php'">Cancelar</button>
 					    <button type="submit" class="btn btn-primary">Enviar</button>
+
 				    </fieldset>
 			    </form>
+			    <br><a href="index.php"> Voltar</a><br>
 			</div>    
 		</div>	    
 	</div>
@@ -76,3 +93,5 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 </body>
 </html>
+
+<?php mysql_close();?>
