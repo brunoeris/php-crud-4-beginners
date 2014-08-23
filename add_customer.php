@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<title>Crud Simples PHP</title>
+	<title>Adicionar Contato</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
 	<link rel="stylesheet" href="css/formatalayout.css">
@@ -26,7 +26,7 @@
 					<ul class="nav">
 						<li><a href="index.php">HOME</a></li>
 					</ul>
-					<form action="" class="navbar-form pull-right">
+					<form action="#" class="navbar-form pull-right">
 						<input type="text" class="span2" placeholder="Apenas decorativo! ;)">
 							<button class="btn btn-inverse">Buscar</button>
 					</form>
@@ -42,20 +42,25 @@
 		</div>
 	</header>
 
-
 	<div class="container">
-		<div class="row">
-			<aside class="span3 bs-docs-sidebar">
-				<ul class="nav nav-list bs-docs-sidenav">
-					<li><a href="tabela_contatos.php"><i class="icon-chevron-right"></i> Tabela de Contatos</a></li>
-					<li><a href="add_customer.php"><i class="icon-chevron-right"></i> Adicione um novo contato!</a></li>
-				</ul>
-			</aside>
-		</div>
-	</div>
-
-	<div class="span9"> 
-		
+		<div class="row-fluid">
+			<div class="span12"> 
+				<form action="inserir_contato.php" method="post">
+				    <fieldset>
+					    <legend>Adicione um novo contato:</legend>
+						    <label>Nome e Sobrenome:</label>
+						    <input type="text" name="primeironome" placeholder="Nome..."><br>
+						    <input type="text" name="sobrenome" placeholder="Sobrenome...">
+						    <label>Endereço:</label>
+						    <textarea name="endereco" cols="30" rows="10"></textarea><br>
+						    <label>Email:</label>
+						    <input type="email" name="email" placeholder="fulano@email.com"><br>
+					    <button type="reset" class="btn">Limpar</button>
+					    <button type="submit" class="btn">Enviar</button>
+				    </fieldset>
+			    </form>
+			</div>    
+		</div>	    
 	</div>
 
 	<!-- Footer

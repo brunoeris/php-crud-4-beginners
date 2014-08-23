@@ -1,9 +1,18 @@
+<?php 
+
+	include_once "conexaobd.php";
+
+	$sql = "SELECT * FROM customer";
+	$result = mysql_query($sql);
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<title>Crud Simples PHP</title>
+	<title>Tabela Contatos</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
 	<link rel="stylesheet" href="css/formatalayout.css">
@@ -26,7 +35,7 @@
 					<ul class="nav">
 						<li><a href="index.php">HOME</a></li>
 					</ul>
-					<form action="" class="navbar-form pull-right">
+					<form action="#" class="navbar-form pull-right">
 						<input type="text" class="span2" placeholder="Apenas decorativo! ;)">
 							<button class="btn btn-inverse">Buscar</button>
 					</form>
@@ -42,20 +51,39 @@
 		</div>
 	</header>
 
-
 	<div class="container">
-		<div class="row">
-			<aside class="span3 bs-docs-sidebar">
-				<ul class="nav nav-list bs-docs-sidenav">
-					<li><a href="tabela_contatos.php"><i class="icon-chevron-right"></i> Tabela de Contatos</a></li>
-					<li><a href="add_customer.php"><i class="icon-chevron-right"></i> Adicione um novo contato!</a></li>
-				</ul>
-			</aside>
-		</div>
-	</div>
+		<div class="row-fluid">
+			<div class="span12"> 
+				
+				<table class="table table-condensed">
+					<thead>
+						<tr>
+							<td>#ID</td>
+							<td>Nome</td>
+							<td>Sobreome</td>
+							<td>Endereço</td>
+							<td>Email</td>
+						</tr>
+					</thead>
+					<?php 
+						while($row = mysql_fetch_array($result)){
+							echo "<tr>";
+							echo	"<td>".$row['id']."</td>";
+							echo	"<td>".$row['primeiro_nome']."</td>";
+							echo	"<td>".$row['segundo_nome']."</td>";
+							echo	"<td>".$row['endereco']."</td>";
+							echo	"<td>".$row['email']."</td>";
+							echo	"<td><a href=\"edit_custumer.php?id=".$row['id']."\">Edit</a></td>";
+							echo	"<td><a href=\"delete_custumer.php?id=".$row['id']."\">Delete</a></td>";
+							echo "</tr>";
+						}
+					?>
+				</table>
 
-	<div class="span9"> 
-		
+				<br><a href="index.php"> Voltar</a><br>
+
+			</div>    
+		</div>	    
 	</div>
 
 	<!-- Footer
@@ -70,3 +98,5 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 </body>
 </html>
+
+<?php mysql_close(); ?>
