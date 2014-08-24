@@ -73,8 +73,8 @@
     ================================================== -->
     <footer class="footer">
       <div class="container">
-        <p class="pull-right"><a href="#">Voltar ao topo</a></p>
-        <p>Material de estudo, contribua em: <a href="https://github.com/brunoeris/CRUD-PHP-SIMPLES" target="_blank">GitHub/CRUD-PHP-SIMPLES</a> // EMAIL: brunoeriss@gmail.com</a>.</p>
+        <p>Material de estudo, contribua em: <a href="https://github.com/brunoeris/CRUD-PHP-SIMPLES" target="_blank">GitHub/CRUD-PHP-SIMPLES</a> // EMAIL: brunoeriss@gmail.com.</p>
+      	<br><p class="pull-right"><a href="#">Voltar ao topo</a></p>
       </div>
     </footer>
 
