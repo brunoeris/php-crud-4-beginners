@@ -7,6 +7,7 @@ Desenvolvimento de um sistema CRUD em php.
 
 * Bootstrap Instalado
 * Jquery Instalado
+* Remodal/Jquery Instalado
 
 
 Banco Mysql com phpmyadmin
