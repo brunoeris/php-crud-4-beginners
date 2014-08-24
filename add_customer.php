@@ -41,25 +41,28 @@
 			<p>Simples CRUD em PHP</p>
 		</div>
 	</header>
-
+	<br>
 	<div class="container">
 		<div class="row-fluid">
 			<div class="span12"> 
 				<form action="inserir_contato.php" method="post">
 				    <fieldset>
-					    <legend>Adicione um novo contato:</legend>
+					    <legend><h2>Adicione um novo contato:</h2></legend>
 						    <label>Nome e Sobrenome:</label>
 						    <input type="text" name="primeironome" placeholder="Nome..." required><br>
 						    <input type="text" name="sobrenome" placeholder="Sobrenome..." required>
 						    <label>Endereço:</label>
 						    <textarea name="endereco" cols="30" rows="10" required></textarea><br>
-						    <label>Email:</label>
-						    <input type="email" name="email" placeholder="fulano@email.com" required><br>
+						    <div class="input-prepend">
+								<span class="add-on">@</span>
+						    	<input type="email" name="email" placeholder="fulano@email.com" required><br>
+						    </div><br>
 					    <button type="reset" class="btn">Limpar</button>
 					    <button type="button" class="btn btn-danger" onclick="location.href='index.php'">Cancelar</button>
 					    <button type="submit" class="btn btn-primary">Enviar</button>
 				    </fieldset>
 			    </form>
+			    <br><a href="index.php"> Voltar</a><br>
 			</div>    
 		</div>	    
 	</div>

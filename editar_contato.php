@@ -52,13 +52,13 @@
 			<p>Simples CRUD em PHP</p>
 		</div>
 	</header>
-
+	<br>
 	<div class="container">
 		<div class="row-fluid">
 			<div class="span12"> 
 				<form action="update_contato.php" method="post">
 				    <fieldset>
-					    <legend>Edite o contato:</legend>
+					    <legend><h2>Edite o contato:</h2></legend>
 					    	<label>ID</label>
 					    	<input type="text" name="id" value="<?php echo $row['id']; ?>" readonly="readonly"><br>
 						    <label>Nome e Sobrenome:</label>
@@ -68,8 +68,10 @@
 						    <textarea name="endereco" cols="30" rows="10" required>
 						    	<?php echo $row['endereco']; ?>
 						    </textarea><br>
-						    <label>Email:</label>
-						    <input type="email" name="email" placeholder="fulano@email.com" value="<?php echo $row['email'];?>" required><br>
+						    <div class="input-prepend">
+								<span class="add-on">@</span>
+						    	<input type="email" name="email" placeholder="fulano@email.com" value="<?php echo $row['email'];?>" required><br>
+						    </div><br>
 					    <button type="reset" class="btn">Limpar</button>
 					    <button type="button" class="btn btn-danger" onclick="location.href='tabela_contatos.php'">Cancelar</button>
 					    <button type="submit" class="btn btn-primary">Enviar</button>
