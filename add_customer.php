@@ -49,12 +49,12 @@
 				    <fieldset>
 					    <legend>Adicione um novo contato:</legend>
 						    <label>Nome e Sobrenome:</label>
-						    <input type="text" name="primeironome" placeholder="Nome..."><br>
-						    <input type="text" name="sobrenome" placeholder="Sobrenome...">
+						    <input type="text" name="primeironome" placeholder="Nome..." required><br>
+						    <input type="text" name="sobrenome" placeholder="Sobrenome..." required>
 						    <label>Endereço:</label>
-						    <textarea name="endereco" cols="30" rows="10"></textarea><br>
+						    <textarea name="endereco" cols="30" rows="10" required></textarea><br>
 						    <label>Email:</label>
-						    <input type="email" name="email" placeholder="fulano@email.com"><br>
+						    <input type="email" name="email" placeholder="fulano@email.com" required><br>
 					    <button type="reset" class="btn">Limpar</button>
 					    <button type="button" class="btn btn-danger" onclick="location.href='index.php'">Cancelar</button>
 					    <button type="submit" class="btn btn-primary">Enviar</button>

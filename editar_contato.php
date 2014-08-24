@@ -62,14 +62,14 @@
 					    	<label>ID</label>
 					    	<input type="text" name="id" value="<?php echo $row['id']; ?>" readonly="readonly"><br>
 						    <label>Nome e Sobrenome:</label>
-						    <input type="text" name="primeironome" placeholder="Nome..." value="<?php echo $row['primeiro_nome']; ?>"><br>
-						    <input type="text" name="sobrenome" placeholder="Sobrenome..." value="<?php echo $row['segundo_nome']; ?>">
+						    <input type="text" name="primeironome" placeholder="Nome..." value="<?php echo $row['primeiro_nome']; ?>" required><br>
+						    <input type="text" name="sobrenome" placeholder="Sobrenome..." value="<?php echo $row['segundo_nome']; ?>" required>
 						    <label>Endereço:</label>
-						    <textarea name="endereco" cols="30" rows="10">
+						    <textarea name="endereco" cols="30" rows="10" required>
 						    	<?php echo $row['endereco']; ?>
 						    </textarea><br>
 						    <label>Email:</label>
-						    <input type="email" name="email" placeholder="fulano@email.com" value="<?php echo $row['email'];?>"><br>
+						    <input type="email" name="email" placeholder="fulano@email.com" value="<?php echo $row['email'];?>" required><br>
 					    <button type="reset" class="btn">Limpar</button>
 					    <button type="button" class="btn btn-danger" onclick="location.href='tabela_contatos.php'">Cancelar</button>
 					    <button type="submit" class="btn btn-primary">Enviar</button>
