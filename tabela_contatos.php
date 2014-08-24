@@ -50,14 +50,14 @@
 			<p>Simples CRUD em PHP</p>
 		</div>
 	</header>
-
+	<br>
 	<div class="container">
 		<div class="container-fluid">
 		<div class="row-fluid">
 			<div class="span12"> 
 				
 				<table class="table table-hover table-bordered">
-					<caption>Lista de Contatos</caption>
+					<caption><h2>Lista de Contatos</h2></caption>
 					<thead>
 						<tr>
 							<td>#ID</td>

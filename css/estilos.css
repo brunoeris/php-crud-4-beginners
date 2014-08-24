@@ -4,3 +4,8 @@
 .bloco1 { background-color: #f2f2f2;}
 
 .bloco2 { background-color: #DDD; }
+
+.img-large {
+	width: 90%;
+	height: 100%;
+}

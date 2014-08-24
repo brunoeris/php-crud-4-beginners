@@ -50,13 +50,16 @@
 					<li><a href="tabela_contatos.php"><i class="icon-chevron-right"></i> Tabela de Contatos</a></li>
 					<li><a href="add_customer.php"><i class="icon-chevron-right"></i> Adicione um novo contato!</a></li>
 				</ul>
+				
 			</aside>
+
+			<div class="span9">
+				<img src="img/email.jpg" class="img-polaroid img-large">
+			</div>
 		</div>
 	</div>
 
-	<div class="span9"> 
-		
-	</div>
+	
 
 	<!-- Footer
     ================================================== -->
