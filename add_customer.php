@@ -25,6 +25,8 @@
 				<div class="nav-collapse collapse">
 					<ul class="nav">
 						<li><a href="index.php">HOME</a></li>
+						<li><a href="add_customer.php">ADD CONTATO</a></li>
+						<li><a href="tabela_contatos.php">TABELA CONTATOS</a></li>
 					</ul>
 					<form action="#" class="navbar-form pull-right">
 						<input type="text" class="span2" placeholder="Apenas decorativo! ;)">
@@ -45,7 +47,7 @@
 	<div class="container">
 		<div class="row-fluid">
 			<div class="span12"> 
-				<form action="inserir_contato.php" method="post">
+				<form action="inserir_contato.php#modaladd" method="post">
 				    <fieldset>
 					    <legend><h2>Adicione um novo contato:</h2></legend>
 						    <label>Nome e Sobrenome:</label>

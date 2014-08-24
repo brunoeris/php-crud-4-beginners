@@ -25,6 +25,8 @@
 				<div class="nav-collapse collapse">
 					<ul class="nav">
 						<li><a href="index.php">HOME</a></li>
+						<li><a href="add_customer.php">ADD CONTATO</a></li>
+						<li><a href="tabela_contatos.php">TABELA CONTATOS</a></li>
 					</ul>
 					<form action="" class="navbar-form pull-right">
 						<input type="text" class="span2" placeholder="Apenas decorativo! ;)">

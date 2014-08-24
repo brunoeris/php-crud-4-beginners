@@ -34,6 +34,8 @@
 				<div class="nav-collapse collapse">
 					<ul class="nav">
 						<li><a href="index.php">HOME</a></li>
+						<li><a href="add_customer.php">ADD CONTATO</a></li>
+						<li><a href="tabela_contatos.php">TABELA CONTATOS</a></li>
 					</ul>
 					<form action="#" class="navbar-form pull-right">
 						<input type="text" class="span2" placeholder="Apenas decorativo! ;)">
@@ -79,7 +81,7 @@
 							echo	"<td>".$row['endereco']."</td>";
 							echo	"<td>".$row['email']."</td>";
 							echo	"<td><a href=\"editar_contato.php?id=".$row['id']."\">Editar</a></td>";
-							echo	"<td><a href=\"deletar_contato.php?id=".$row['id']."\">Deletar</a></td>";
+							echo	"<td><a href=\"deletar_contato.php?id=".$row['id']."#modaldel\">Deletar</a></td>";
 							echo "</tr>";
 							echo "</tbody>";
 						}
