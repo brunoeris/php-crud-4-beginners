@@ -64,7 +64,7 @@
 						<tr>
 							<td>#ID</td>
 							<td>Nome</td>
-							<td>Sobreome</td>
+							<td>Sobrenome</td>
 							<td>Endereço</td>
 							<td>Email</td>
 							<td></td>
