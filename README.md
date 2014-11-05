@@ -1,7 +1,7 @@
 CRUD-PHP-SIMPLES
 ================
 
-SIMPLE CRUD PHP
+SIMPLE CRUD PHP (para iniciantes)
 
 Desenvolvimento de um sistema CRUD em php.
 
@@ -10,7 +10,7 @@ Desenvolvimento de um sistema CRUD em php.
 * Remodal/Jquery Instalado
 
 
-Banco Mysql com phpmyadmin
+BD Mysql
 
 1 Tabela -> 5 Campos = id(auto)(pk), primeiro_nome, segundo_nome, endereco, email;
 
