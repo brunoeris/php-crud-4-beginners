@@ -1,7 +1,5 @@
-CRUD-PHP-SIMPLES
+php-crud-4-beginners
 ================
-
-Desenvolvimento de um sistema CRUD em php (para iniciantes).
 
 * Bootstrap
 * Jquery
